@@ -9,7 +9,7 @@ router.get(
 
 router.get(
   '/google/callback',
-  passport.authenticate('google', { failureRedirect: '/home' }),
+  //passport.authenticate('google', { failureRedirect: '/home' }),
   (req, res) => {
     // Successful authentication, redirect to the client application
     res.redirect('https://crm-frontend-nine-omega.vercel.app/home');
