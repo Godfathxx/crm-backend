@@ -4,7 +4,7 @@ const queueName = 'crm_queue';
 
 const createChannel = async () => {
   try {
-    const connection = await amqp.connect('amqp://localhost');
+    const connection = await amqp.connect(process.env.RABBITMQ_URL);
     connection.on('error', (err) => {
       console.error('AMQP connection error:', err.message);
     });
