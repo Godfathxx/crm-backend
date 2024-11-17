@@ -37,6 +37,7 @@ router.post('/logout', (req, res, next) => {
       
       res.clearCookie('connect.sid', { path: '/login' });
       res.status(200).json({ message: 'Logout successful' });
+      res.json({isAuthenticated: false});
     });
   });
 });
