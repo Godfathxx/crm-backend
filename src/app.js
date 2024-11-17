@@ -9,7 +9,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://crm-frontend-nine-omega.vercel.app/', // Allow only your frontend's origin
+  origin: 'https://crm-frontend-nine-omega.vercel.app', // Allow only your frontend's origin
   credentials: true, // Enable credentials for session management
 }));
 app.use(express.json());
